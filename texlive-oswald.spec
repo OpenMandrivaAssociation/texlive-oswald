@@ -3,7 +3,7 @@ Version:	60784
 Release:	2
 Summary:	The Oswald family of fonts with support for LaTeX and pdfLaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/oswald
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/oswald
 License:	ofl lppl
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oswald.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oswald.doc.r%{version}.tar.xz
