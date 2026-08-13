@@ -12,9 +12,17 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/oswald.r%{tl_rev
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/oswald.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This package provides the Oswald family of fonts, designed by Vernon
 Adams, Kalapi Gajjar, Cyreal, with support for LaTeX and pdfLaTeX.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from oswald:
+Map Zeroswald.map
+TL_DROPIN_EOF
